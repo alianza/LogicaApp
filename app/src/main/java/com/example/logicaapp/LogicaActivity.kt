@@ -7,10 +7,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class LogicaActivity : AppCompatActivity() {
 
-    val corrAnsw1 = "t"
-    val corrAnsw2 = "f"
-    val corrAnsw3 = "f"
-    val corrAnsw4 = "f"
+    private val corrAnswArr = arrayOf("T", "F", "F", "F")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,15 +23,13 @@ class LogicaActivity : AppCompatActivity() {
     }
 
     private fun onSubmit() {
-        var answer1 = answ1.text.toString().toLowerCase()
-        var answer2 = answ2.text.toString().toLowerCase()
-        var answer3 = answ3.text.toString().toLowerCase()
-        var answer4 = answ4.text.toString().toLowerCase()
+        val answArr = arrayOf(answ1.text.toString(), answ2.text.toString(), answ3.text.toString(), answ4.text.toString())
 
-        if (!answer1.equals(corrAnsw1) || !answer2.equals(corrAnsw2) ||
-            !answer3.equals(corrAnsw3) || !answer4.equals(corrAnsw4)) {
-            displayInCorrect()
-            return
+        for (i in 0..corrAnswArr.lastIndex) {
+            if (corrAnswArr[i].toUpperCase() != answArr[i].toUpperCase()) {
+                displayInCorrect()
+                return
+            }
         }
 
         displayCorrect()

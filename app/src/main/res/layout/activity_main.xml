@@ -161,6 +161,8 @@
         android:ems="10"
         android:inputType="textPersonName|textCapCharacters"
         android:maxLength="1"
+        android:textAlignment="center"
+        android:textAllCaps="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -173,6 +175,8 @@
         android:ems="10"
         android:inputType="textPersonName|textCapCharacters"
         android:maxLength="1"
+        android:textAlignment="center"
+        android:textAllCaps="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/answ1" />
 
@@ -185,6 +189,8 @@
         android:ems="10"
         android:inputType="textPersonName|textCapCharacters"
         android:maxLength="1"
+        android:textAlignment="center"
+        android:textAllCaps="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/answ2" />
 
@@ -197,6 +203,8 @@
         android:ems="10"
         android:inputType="textPersonName|textCapCharacters"
         android:maxLength="1"
+        android:textAlignment="center"
+        android:textAllCaps="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/answ3" />
 
