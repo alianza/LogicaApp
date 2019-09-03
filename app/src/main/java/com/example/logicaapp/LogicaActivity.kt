@@ -1,6 +1,5 @@
 package com.example.logicaapp
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -14,7 +13,7 @@ class LogicaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        initListeners()
+        this.initListeners()
     }
 
     private fun initListeners() {
@@ -24,16 +23,13 @@ class LogicaActivity : AppCompatActivity() {
     }
 
     private fun onSubmit() {
-        val answArr = arrayOf(answ1.text, answ2.text, answ3.text, answ4.text)
+        val answArr = arrayOf(answ1.text.toString(), answ2.text.toString(), answ3.text.toString(), answ4.text.toString())
 
-        for (i in 0..corrAnswArr.lastIndex) {
-            if (corrAnswArr[i].toUpperCase() != answArr[i].toString().toUpperCase()) {
-                displayInCorrect()
-                return
-            }
+        if (corrAnswArr contentEquals answArr) {
+            displayCorrect()
+        } else {
+            displayInCorrect()
         }
-
-        displayCorrect()
     }
 
     private fun displayCorrect() {
